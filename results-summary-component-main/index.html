@@ -1,47 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+			rel="stylesheet" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script type="module" src="./assets/js/main.js"></script>
 
-  Your Result
-  76
-  of 100
+		<title>Frontend Mentor | Results summary component</title>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<article class="card">
+				<div class="card__header">
+					<span class="result-text">Your Result</span>
+					<div class="result-container">
+						<div class="result-content">
+							<span class="result-scored">76</span>
+							<span class="result-total">of 100</span>
+						</div>
+					</div>
+					<h2 class="card__title">Great</h2>
+					<h3 class="card__subtitle">
+						You scored higher than 65% of the people who have taken these
+						tests.
+					</h3>
+				</div>
+				<div class="card__body">
+					<span>Summary</span>
+					<div class="results">
+						<ul class="results__list">
+							<li class="results__item">
+								<div class="results__content results__content--red">
+									<div class="results__category">
+										<img
+											src="./assets/images/icon-reaction.svg"
+											alt="Reaction Icon" />
+										<p class="results__text">Reaction</p>
+									</div>
+									<div class="results__scores">
+										<p class="scored">80&nbsp;</p>
+										<p class="total">/ 100</p>
+									</div>
+								</div>
+							</li>
+							<li class="results__item">
+								<div class="results__content results__content--yellow">
+									<div class="results__category">
+										<img
+											src="./assets/images/icon-memory.svg"
+											alt="Reaction Icon" />
+										<p class="results__text">Memory</p>
+									</div>
+									<div class="results__scores">
+										<p class="scored">80&nbsp;</p>
+										<p class="total">/ 100</p>
+									</div>
+								</div>
+							</li>
+							<li class="results__item">
+								<div class="results__content results__content--green">
+									<div class="results__category">
+										<img
+											src="./assets/images/icon-verbal.svg"
+											alt="Reaction Icon" />
+										<p class="results__text">Verbal</p>
+									</div>
+									<div class="results__scores">
+										<p class="scored">80&nbsp;</p>
+										<p class="total">/ 100</p>
+									</div>
+								</div>
+							</li>
+							<li class="results__item">
+								<div class="results__content results__content--blue">
+									<div class="results__category">
+										<img
+											src="./assets/images/icon-visual.svg"
+											alt="Reaction Icon" />
+										<p class="results__text">Visual</p>
+									</div>
+									<div class="results__scores">
+										<p class="scored">80&nbsp;</p>
+										<p class="total">/ 100</p>
+									</div>
+								</div>
+							</li>
+						</ul>
 
-  Reaction
-  80 / 100
+						<button class="btn">Continue</button>
+					</div>
+				</div>
+			</article>
+		</div>
 
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
 </html>
