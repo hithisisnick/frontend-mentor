@@ -2,6 +2,55 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout />
+<Layout>
+	<div class='wrapper'>
+		<h1>Frontend Mentor Challenges</h1>
+		<ul class='link__list'>
+			<li>
+				<a href='social-links'>Social Links Profile Card</a>
+			</li>
+		</ul>
+	</div>
+</Layout>
 
-<style></style>
+<style lang='scss'>
+	.wrapper {
+		height: 100%;
+		width: 100%;
+		background-color: #1c1c1c;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	h1 {
+		margin-bottom: 2rem;
+		color: white;
+		font-family: sans-serif;
+	}
+
+	.link__list {
+		padding: 0;
+		list-style: none;
+
+		li {
+			padding: 1.5rem;
+		}
+
+		a {
+			padding: 1.5rem;
+			border-radius: 1rem;
+			font-size: 1.25rem;
+			font-family: sans-serif;
+			font-weight: 700;
+			background-color: #2c2c2c;
+			color: white;
+			text-decoration: none;
+
+			&:hover {
+				background-color: #3c3c3c;
+			}
+		}
+	}
+</style>
