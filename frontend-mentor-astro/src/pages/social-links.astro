@@ -1,0 +1,40 @@
+---
+import Card from '../components/social-links/Card.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<div class='container'>
+		<Card />
+	</div>
+</Layout>
+
+<style>
+	:root {
+		--green: hsl(75, 94%, 57%);
+		--white: hsl(0, 0%, 100%);
+		--grey-700: hsl(0, 0%, 20%);
+		--grey-800: hsl(0, 0%, 12%);
+		--grey-900: hsl(0, 0%, 8%);
+	}
+
+	body {
+		background-color: var(--grey-900);
+		font-family: 'Inter-Variable', sans-serif;
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	@font-face {
+		font-family: 'Inter-Variable';
+		src: url('/fonts/Inter-Variable.ttf') format('truetype');
+		font-weight: 400 700;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>

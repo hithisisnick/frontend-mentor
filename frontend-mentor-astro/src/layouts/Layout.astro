@@ -19,14 +19,6 @@
 </html>
 
 <style is:global>
-	:root {
-		--green: hsl(75, 94%, 57%);
-		--white: hsl(0, 0%, 100%);
-		--grey-700: hsl(0, 0%, 20%);
-		--grey-800: hsl(0, 0%, 12%);
-		--grey-900: hsl(0, 0%, 8%);
-	}
-
 	*,
 	*::before,
 	*::after {
@@ -44,11 +36,8 @@
 	}
 
 	body {
-		background-color: var(--grey-900);
 		line-height: 1.5;
 		-webkit-font-smoothing: antialiased;
-
-		font-family: 'Inter-Variable', sans-serif;
 	}
 
 	img,
@@ -107,13 +96,5 @@
 
 	.attribution a {
 		color: hsl(228, 45%, 60%);
-	}
-
-	@font-face {
-		font-family: 'Inter-Variable';
-		src: url('/fonts/Inter-Variable.ttf') format('truetype');
-		font-weight: 400 700;
-		font-style: normal;
-		font-display: swap;
 	}
 </style>
