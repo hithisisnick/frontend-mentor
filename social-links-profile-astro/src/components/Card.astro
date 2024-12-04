@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import jessicaImg from '../assets/images/avatar-jessica.jpeg';
+---
+
+<article class='card'>
+	<div class='card__header'>
+		<figure class='card__figure'>
+			<Image
+				src={jessicaImg}
+				alt="Jessica's avatar"
+				class='card__avatar'
+				height={88}
+				width={88}
+			/>
+		</figure>
+	</div>
+	<div class='card__body'>
+		<h2 class='card__title'>Jessica Randall</h2>
+		<h3 class='card__subtitle'>London, United Kingdom</h3>
+		<p class='card__quote'>"Front-end developer and avid reader."</p>
+		<ul class='card__list'>
+			<li class='card__list_item'>
+				<a href='#'>GitHub</a>
+			</li>
+			<li class='card__list_item'>
+				<a href='#'>Frontend Mentor</a>
+			</li>
+			<li class='card__list_item'>
+				<a href='#'>LinkedIn</a>
+			</li>
+			<li class='card__list_item'>
+				<a href='#'>Twitter</a>
+			</li>
+			<li class='card__list_item'>
+				<a href='#'>Instagram</a>
+			</li>
+		</ul>
+	</div>
+</article>
+
+<style lang='scss'>
+	.card {
+		$self: &;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		padding: 1.5rem;
+		background-color: var(--grey-800);
+		max-width: calc(100% - 3rem);
+		width: 100%;
+
+		vertical-align: top;
+		border-radius: 1.5rem;
+
+		@media screen and (min-width: 992px) {
+			padding: 2.5rem;
+			max-width: 24rem;
+		}
+
+		&__figure {
+			img {
+				border-radius: 50%;
+				height: 88px;
+				width: 88px;
+				object-fit: cover;
+			}
+		}
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			margin-top: 2rem;
+			width: 100%;
+		}
+
+		&__title {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: var(--white);
+		}
+
+		&__subtitle {
+			font-size: 0.875rem;
+			font-weight: 700;
+			color: var(--green);
+		}
+
+		&__quote {
+			margin-top: 1.25rem;
+			margin-bottom: 1.25rem;
+			font-size: 0.875rem;
+			color: var(--white);
+		}
+
+		&__list {
+			padding: 0;
+			list-style: none;
+			width: 100%;
+		}
+
+		&__list_item {
+			a {
+				display: block;
+				padding: 1rem;
+				width: 100%;
+				border-radius: 0.5rem;
+				background-color: var(--grey-700);
+				color: var(--white);
+				font-weight: 600;
+				text-align: center;
+				text-decoration: none;
+
+				&:hover {
+					color: var(--grey-700);
+					background-color: var(--green);
+				}
+			}
+
+			&:not(:first-child) {
+				margin-top: 1rem;
+			}
+		}
+	}
+</style>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='generator' content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<slot />
+		<div class='attribution'>
+			Challenge by <a
+				href='https://www.frontendmentor.io?ref=challenge'
+				target='_blank'>Frontend Mentor</a
+			>. Coded by <a href='#'>Nick</a>.
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--green: hsl(75, 94%, 57%);
+		--white: hsl(0, 0%, 100%);
+		--grey-700: hsl(0, 0%, 20%);
+		--grey-800: hsl(0, 0%, 12%);
+		--grey-900: hsl(0, 0%, 8%);
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	* {
+		margin: 0;
+	}
+
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+	}
+
+	body {
+		background-color: var(--grey-900);
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+
+		font-family: 'Inter-Variable', sans-serif;
+	}
+
+	img,
+	picture,
+	video,
+	canvas,
+	svg {
+		display: block;
+		max-width: 100%;
+	}
+
+	input,
+	button,
+	textarea,
+	select {
+		font: inherit;
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		overflow-wrap: break-word;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-wrap: balance;
+	}
+
+	#root,
+	#__next {
+		isolation: isolate;
+	}
+
+	.attribution {
+		position: fixed;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
+		color: var(--white);
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.attribution a {
+		color: hsl(228, 45%, 60%);
+	}
+
+	@font-face {
+		font-family: 'Inter-Variable';
+		src: url('/fonts/Inter-Variable.ttf') format('truetype');
+		font-weight: 400 700;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>
