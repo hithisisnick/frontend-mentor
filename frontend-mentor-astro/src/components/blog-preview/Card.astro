@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import illustrationArticle from '@assets/blog-preview/images/illustration-article.svg';
+import avatar from '@assets/blog-preview/images/image-avatar.webp';
+---
+
+<article class='card'>
+	<div class='card__header'>
+		<figure class='card__figure'>
+			<Image
+				src={illustrationArticle}
+				alt='Blog preview image'
+				class='card__avatar'
+			/>
+		</figure>
+	</div>
+	<div class='card__body'>
+		<p class='card__tag'>Learning</p>
+		<p class='card__date'>Published 21 Dec 2023</p>
+		<h2 class='card__title'>HTML & CSS foundations</h2>
+		<p class='card__description'>
+			These languages are the backbone of every website, defining structure,
+			content, and presentation.
+		</p>
+		<div class='card__author'>
+			<Image src={avatar} alt="Greg's avatar." height={32} width={32} />
+			<span>Greg Hooper</span>
+		</div>
+	</div>
+</article>
+
+<style lang='scss'>
+	.card {
+		$self: &;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		border: 1px solid var(--grey-950);
+
+		padding: 1.5rem;
+		background-color: var(--white);
+		max-width: calc(100% - 3rem);
+		width: 100%;
+
+		vertical-align: top;
+		border-radius: 1.25rem;
+
+		box-shadow: 8px 8px 0px black;
+		max-width: 24rem;
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.75rem;
+			margin-top: 1.5rem;
+		}
+
+		&__figure {
+			img {
+				object-fit: cover;
+				border-radius: 0.625rem;
+			}
+		}
+
+		&__tag {
+			padding: 0.25rem 0.75rem;
+			background-color: var(--yellow);
+			border-radius: 0.25rem;
+			width: fit-content;
+
+			font-size: 0.75rem;
+			font-weight: 800;
+			color: var(--grey-950);
+			line-height: 1.5;
+
+			@media screen and (min-width: 992px) {
+				font-size: 0.875rem;
+			}
+		}
+
+		&__date {
+			font-size: 0.75rem;
+			font-weight: 500;
+			color: var(--grey-950);
+			line-height: 1.5;
+
+			@media screen and (min-width: 992px) {
+				font-size: 0.875rem;
+			}
+		}
+
+		&__title {
+			font-size: 1.25rem;
+			font-weight: 800;
+			color: var(--grey-950);
+			line-height: 1.5;
+
+			@media screen and (min-width: 992px) {
+				font-size: 1.5rem;
+			}
+		}
+
+		&__description {
+			font-size: 0.875rem;
+			font-weight: 500;
+			color: var(--grey-500);
+			line-height: 1.5;
+
+			@media screen and (min-width: 992px) {
+				font-size: 1rem;
+			}
+		}
+
+		&__author {
+			display: flex;
+			column-gap: 0.75rem;
+			align-items: center;
+			margin-top: 0.75rem;
+
+			span {
+				font-size: 0.875rem;
+				font-weight: 800;
+				color: var(--grey-950);
+				line-height: 1.5;
+			}
+		}
+	}
+</style>

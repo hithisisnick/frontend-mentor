@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import aiContent from '@assets/bento-grid/images/illustration-ai-content.webp';
+import audienceGrowth from '@assets/bento-grid/images/illustration-audience-growth.webp';
+import consistentSchedule from '@assets/bento-grid/images/illustration-consistent-schedule.webp';
+import createPost from '@assets/bento-grid/images/illustration-create-post.webp';
+import fiveStars from '@assets/bento-grid/images/illustration-five-stars.webp';
+import growFollowers from '@assets/bento-grid/images/illustration-grow-followers.webp';
+import multiplePlatforms from '@assets/bento-grid/images/illustration-multiple-platforms.webp';
+import schedulePosts from '@assets/bento-grid/images/illustration-schedule-posts.webp';
+---
+
+<Layout>
+	<div class='container'>
+		<div class='bento-grid'>
+			<div class='item'>
+				<p>
+					Create and schedule content <i class='italic'>quicker.</i>
+				</p>
+				<Image src={createPost} alt='Create Post' />
+			</div>
+			<div class='item'>
+				<!-- <Image src={createPost} alt='' /> -->
+			</div>
+			<div class='item'>
+				<!-- <Image src={fiveStars} alt='' /> -->
+			</div>
+			<div class='item'>
+				<!-- <Image src={multiplePlatforms} alt='' /> -->
+			</div>
+			<div class='item'>
+				<!-- <Image src={consistentSchedule} alt='' /> -->
+			</div>
+			<div class='item'>
+				<!-- <Image src={audienceGrowth} alt='' /> -->
+			</div>
+			<div class='item'>
+				<!-- <Image src={schedulePosts} alt='' /> -->
+			</div>
+			<div class='item'>
+				<!-- <Image src={growFollowers} alt='' /> -->
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style lang='scss'>
+	:root {
+		--purple-100: hsl(254, 88%, 90%);
+		--purple-500: hsl(256, 67%, 59%);
+		--yellow-100: hsl(31, 66%, 93%);
+		--yellow-500: hsl(39, 100%, 71%);
+		--white: hsl(0, 0%, 100%);
+		--black: hsl(0, 0%, 7%);
+		--grey: hsl(0, 0%, 96%);
+	}
+
+	body {
+		background-color: var(--grey);
+		font-family: 'DMSans-Variable', sans-serif;
+	}
+
+	.italic {
+		font-family: 'DMSans-Italic-Variable', sans-serif;
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		max-width: 1000px;
+		width: 100%;
+	}
+
+	.bento-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		gap: 2rem;
+		grid-auto-flow: row;
+		grid-template-areas:
+			'A C C G'
+			'A C C G'
+			'A D E G'
+			'B D E G'
+			'B F H H'
+			'B F H H';
+		background: hsl(36, 100%, 99%);
+		width: 100%;
+		max-width: 1500px;
+		height: 1000px;
+		padding: 1vw;
+
+		.item {
+			border: 2px solid #464545;
+			border-radius: 5px;
+		}
+	}
+
+	.item:nth-child(1) {
+		grid-area: A;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		row-gap: 1.25rem;
+		background-color: var(--yellow-100);
+
+		p {
+			font-size: 2rem;
+			font-weight: 500;
+
+			i {
+				color: var(--purple-500);
+			}
+		}
+
+		img {
+			object-fit: cover;
+		}
+	}
+
+	.item:nth-child(2) {
+		grid-area: B;
+	}
+
+	.item:nth-child(3) {
+		grid-area: C;
+	}
+
+	.item:nth-child(4) {
+		grid-area: D;
+	}
+
+	.item:nth-child(5) {
+		grid-area: E;
+	}
+
+	.item:nth-child(6) {
+		grid-area: F;
+	}
+
+	.item:nth-child(7) {
+		grid-area: G;
+	}
+
+	.item:nth-child(8) {
+		grid-area: H;
+	}
+
+	@font-face {
+		font-family: 'DMSans-Variable';
+		src: url('/fonts/bento-grid/DMSans-VariableFont_opsz.ttf') format('truetype');
+		font-weight: 400 700;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'DMSans-Variable';
+		src: url('/fonts/bento-grid/DMSans-Italic-VariableFont_opsz.ttf')
+			format('truetype');
+		font-weight: 400 700;
+		font-style: italic;
+		font-display: swap;
+	}
+</style>
